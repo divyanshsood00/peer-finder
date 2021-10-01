@@ -1,0 +1,84 @@
+.last-name{
+    color: var(--gian);
+}
+
+.sidebar{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.sidebar__name{
+    font-weight: 700;
+}
+.sidebar__logo{
+    width: 11rem;
+    text-align: center;
+    /* height: 100%;     */
+    /* transform: translateX(-5rem); */
+    background-color:  #00bf8f
+}
+
+.sidebar__logo-container{
+    margin: 0 auto;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar__title{
+    border-radius: 500px;
+    background-color: #00bf8f2d;
+    padding: 1rem;
+}
+.sidebar__nav{
+    text-align: left;
+    height: 40%;
+    width: 80%;
+    font-size: larger;
+    border: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar__nav>*{
+    border: 20px black;
+    border-radius: .5rem;
+    padding: .5rem;
+    height: 3rem;
+    background-color:var(--gian);
+}
+a{
+    color: aliceblue;
+}
+.sidebar__nav>*>*:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+.sidebar__buttons{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.sidebar__contact{
+    background-color:  #00bf8f2d;
+    padding: .75rem;
+    border-radius: 20px;
+}
+.sidebar__contact>*{
+    margin: 2px;
+}
+
+.btn.login-button{
+    background-color: #00bf8f;  /* fallback for old browsers */
+
+}
+
