@@ -8,7 +8,9 @@ function Navbar() {
         let currentURL = window.location.href
         console.log(currentURL)
         if (currentURL.endsWith('/'))
-            setActive('Home');
+            setActive('PEER FINDER');
+        else if (currentURL.endsWith('/home'))
+        setActive('Home');
         else if (currentURL.endsWith("/notes"))
             setActive('Notes');
         else if (currentURL.endsWith('/courses'))
@@ -20,7 +22,10 @@ function Navbar() {
                 {active}
             </div>
             <div className="navbar__items">
-                {active !== 'Home'&& <Link to='/'className="navbar__item">
+                {active !== 'PEER FINDER'&& <Link to='/'className="navbar__item">
+                <div onClick={()=>setActive("PEER FINDER")}>PEER FINDER</div>
+                </Link>}
+                {active !== 'home'&& <Link to='/home'className="navbar__item">
                 <div onClick={()=>setActive("Home")}>Home</div>
                 </Link>}
                 {active !== 'Notes'&& <Link to='/notes' className="navbar__item">

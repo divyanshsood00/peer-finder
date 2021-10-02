@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import Notes from './pages/Notes'
+import Landing from './pages/landing';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
               <Navbar />
               <Switch>
                 <Route path='/' exact>
+                  <Landing/>
+                </Route>
+                <Route path='/home'>
                   <Home/>
                 </Route>
                 <Route path='/courses'>
