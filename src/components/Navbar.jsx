@@ -10,7 +10,7 @@ function Navbar() {
         if (currentURL.endsWith('/'))
             setActive('PEER FINDER');
         else if (currentURL.endsWith('/home'))
-        setActive('Home');
+        setActive('home');
         else if (currentURL.endsWith("/notes"))
             setActive('Notes');
         else if (currentURL.endsWith('/courses'))
