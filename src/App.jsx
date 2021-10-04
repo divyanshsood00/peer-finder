@@ -6,12 +6,13 @@ import Home from './pages/Home'
 import Courses from './pages/Courses'
 import Notes from './pages/Notes'
 import Landing from './pages/landing';
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      
         <div className="container-main">
           <div className="row">
             <div className="col-lg-3 col-md-4">
@@ -34,6 +35,12 @@ function App() {
                 </Route>
                 <Route path='/notes'>
                   <Notes/>
+                </Route>
+                <Route path='/login'>
+                  <Login/>
+                </Route>
+                <Route path='/register'>
+                  <Register/>
                 </Route>
                 <Route>
                   <Redirect to='/'/>
