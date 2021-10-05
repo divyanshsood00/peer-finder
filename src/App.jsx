@@ -8,6 +8,7 @@ import Notes from './pages/Notes'
 import Landing from './pages/landing';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Contact from './pages/Contact';
 
 function App() {
   const [active,setActive] = useState(false)
@@ -43,6 +44,9 @@ function App() {
                 <Route path='/courses'>
                   <Courses/>
                 </Route>
+                <Route path='/contact'>
+                  <Contact/>
+                </Route>
                 <Route path='/notes'>
                   <Notes/>
                 </Route>
@@ -73,6 +77,9 @@ function App() {
                 </Route>
                 <Route path='/notes'>
                   <Notes/>
+                </Route>
+                <Route path='/contact'>
+                  <Contact/>
                 </Route>
                 <Route path='/login'>
                   <Login/>
