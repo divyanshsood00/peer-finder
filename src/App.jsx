@@ -20,7 +20,11 @@ function App() {
     currentURL = window.location.href;
     if (currentURL.endsWith('/home'))
             setActive(true);
-  }, [currentURL])
+  }, [currentURL,active])
+  const activeHandler = ()=>{
+    // console.log('Its happening')
+    setActive('/home')
+  }
   return (
     <div className="App">
       <BrowserRouter>
@@ -34,7 +38,7 @@ function App() {
 
             {active && <div className="col-lg-9 col-md-8">
               <div className="app__main-content">
-              <Navbar />
+              <Navbar navHandler={activeHandler}/>
               <Switch>
                 <Route path='/' exact>
                   <Landing/>
@@ -68,7 +72,7 @@ function App() {
             </div>}
             {!active && <div className="col">
               <div className="app__main-content">
-              <Navbar />
+              <Navbar navHandler={activeHandler} />
               <Switch>
                 <Route path='/' exact>
                   <Landing/>

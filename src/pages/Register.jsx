@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
+import './login-register.css'
 
 function Register() {
 
@@ -50,51 +51,56 @@ function Register() {
 
   return (
     <div className="sign_up_form">
-      <div className="sign_up_form_head">
-        <h1>Let's set up your account</h1>
+      <div className="form-background">
+
+        <div className="sign_up_form-head">
+          <h1>Let's set up your account</h1>
+        </div>
+        <form method="POST">
+          <div className="form-group">
+            <input
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter Your E-mail"
+              name="email"
+              value={user.email}
+              onChange={handleInputs}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              placeholder="Enter Your Password"
+              name="password"
+              value={user.password}
+              onChange={handleInputs}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              className="form-control"
+              id="exampleInputPassword2"
+              placeholder="Confirm Your Password"
+              name="confirmPassword"
+              value={user.confirmPassword}
+              onChange={handleInputs}
+            />
+          </div>
+          <div className="form-button">
+            <button type="submit" className="btn btn-info" onClick={postData}>
+              Next
+            </button>
+          </div>
+          <p className="login_account">
+            Already a Member? <NavLink to="/login">Login Here</NavLink>
+          </p>
+        </form>
       </div>
-      <form method="POST">
-        <div className="form-group">
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter Your E-mail"
-            name="email"
-            value={user.email}
-            onChange={handleInputs}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Enter Your Password"
-            name="password"
-            value={user.password}
-            onChange={handleInputs}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword2"
-            placeholder="Confirm Your Password"
-            name="confirmPassword"
-            value={user.confirmPassword}
-            onChange={handleInputs}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary" onClick={postData}>
-          Next
-        </button>
-        <p className="login_account">
-          Already a Member? <NavLink to="/login">Login Here</NavLink>
-        </p>
-      </form>
     </div>
   );
 };

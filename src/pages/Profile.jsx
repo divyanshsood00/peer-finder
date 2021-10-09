@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Multiselect } from "multiselect-react-dropdown";
+import './profile.css'
 
 const Profile = () => {
   const TechInterest =  ["Web Development", "Android Development", "ML", "AI", "AWS"];
@@ -134,147 +135,148 @@ const Profile = () => {
     }
 
     return (
-      <div className="sign_up_form" style={{ marginTop: "-15px" }}>
-        <div className="sign_up_form_head sign_up_profile1_head">
-          <h1>Set Up Your Profile </h1>
-          <h1>{id} </h1>
+      <div className="profile_form">
+        <div className="form-background">
+
+            <div className="sign_up_form_head sign_up_profile1_head">
+              <h1>Set Up Your Profile </h1>
+              {id}
+            </div>
+            <form method="POST">
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter First name"
+                    name="first_name"
+                    value={user.first_name}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Last name"
+                    name="last_name"
+                    value={user.last_name}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Mobile Number"
+                    name="mobile_number"
+                    value={user.mobile_number}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Bio"
+                    name="bio"
+                    value={user.bio}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Year of passing"
+                    name="year_of_passing"
+                    value={user.year_of_passing}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter LinkedInUrl"
+                    name="linkedin_url"
+                    value={user.linkedin_url}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter GitHub Url"
+                    name="github_url"
+                    value={user.github_url}
+                    onChange={handleInputs}
+                  />
+                </div>
+
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <Multiselect
+                    options={TechInterest}
+                    closeIcon="close"
+                    isObject={false}
+                    selectionLimit="2"
+                    showCheckbox={true}
+                    placeholder="Select Technical Interest"
+                    onSelect={selectTech}
+                    onRemove={removeTech}
+                    // displayValue="key"
+                    showArrow
+                    // selectedValues={selectedValues}
+                    avoidHighlightFirstOption
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <Multiselect
+                    options={NonTechInterest}
+                    closeIcon="close"
+                    isObject={false}
+                    selectionLimit="2"
+                    showCheckbox={true}
+                    placeholder="Select Non Technical Interest"
+                    onSelect={selectNonTech}
+                    onRemove={removeNonTech}
+                    // displayValue="key"
+                    showArrow
+                    // selectedValues={selectedValues}
+                    avoidHighlightFirstOption
+                  />
+                </div>
+                <div className="col" style={{ marginTop: "7px" }}>
+                  <Multiselect
+                    options={CulturalInterest}
+                    closeIcon="close"
+                    isObject={false}
+                    selectionLimit="2"
+                    showCheckbox={true}
+                    placeholder="Select Cultural Interest"
+                    onSelect={selectCultural}
+                    onRemove={removeCultural}
+                    // displayValue="key"
+                    showArrow
+                    // selectedValues={selectedValues}
+                    avoidHighlightFirstOption
+                  />
+                </div>
+
+      
+            </form>
+            <div className="form-button">
+              <button
+                type="submit"
+                className="btn btn-info"
+                style={{ marginTop: "12px" }}
+                onClick={postData}
+                // onClick={console.log()}
+              >
+                Next
+              </button>
+            </div>
         </div>
-        <form method="POST">
-            
-  
-          
-            
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter First name"
-                name="first_name"
-                value={user.first_name}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Last name"
-                name="last_name"
-                value={user.last_name}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Mobile Number"
-                name="mobile_number"
-                value={user.mobile_number}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Bio"
-                name="bio"
-                value={user.bio}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Year of passing"
-                name="year_of_passing"
-                value={user.year_of_passing}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter LinkedInUrl"
-                name="linkedin_url"
-                value={user.linkedin_url}
-                onChange={handleInputs}
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter GitHub Url"
-                name="github_url"
-                value={user.github_url}
-                onChange={handleInputs}
-              />
-            </div>
-
-            <div className="col" style={{ marginTop: "7px" }}>
-              <Multiselect
-                options={TechInterest}
-                closeIcon="close"
-                isObject={false}
-                selectionLimit="2"
-                showCheckbox={true}
-                placeholder="Select Technical Interest"
-                onSelect={selectTech}
-                onRemove={removeTech}
-                // displayValue="key"
-                showArrow
-                // selectedValues={selectedValues}
-                avoidHighlightFirstOption
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <Multiselect
-                options={NonTechInterest}
-                closeIcon="close"
-                isObject={false}
-                selectionLimit="2"
-                showCheckbox={true}
-                placeholder="Select Non Technical Interest"
-                onSelect={selectNonTech}
-                onRemove={removeNonTech}
-                // displayValue="key"
-                showArrow
-                // selectedValues={selectedValues}
-                avoidHighlightFirstOption
-              />
-            </div>
-            <div className="col" style={{ marginTop: "7px" }}>
-              <Multiselect
-                options={CulturalInterest}
-                closeIcon="close"
-                isObject={false}
-                selectionLimit="2"
-                showCheckbox={true}
-                placeholder="Select Cultural Interest"
-                onSelect={selectCultural}
-                onRemove={removeCultural}
-                // displayValue="key"
-                showArrow
-                // selectedValues={selectedValues}
-                avoidHighlightFirstOption
-              />
-            </div>
-
-  
-          <button
-            type="submit"
-            className="btn btn-primary"
-            style={{ marginTop: "12px" }}
-            onClick={postData}
-            // onClick={console.log()}
-          >
-            Next
-          </button>
-        </form>
       </div>
     );  
   } 
@@ -286,3 +288,7 @@ const Profile = () => {
   };
 
 export default Profile;
+            
+  
+          
+            

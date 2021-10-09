@@ -10,8 +10,8 @@ function Sidebar() {
                 {/* <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.jQSGViId2BHzhFLl5yH1AgHaMW%26pid%3DApi&f=1" alt="CodeAcad Logo" className='sidebar__logo' /> */}
                 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.hnPusoAxiAqGgVS153rJUgHaFj%26pid%3DApi&f=1" alt="CodeAcad Logo" className='sidebar__logo' />
             </div>
-            <h2 className="sidebar__name">Code <span className="last-name">Acads</span></h2>
-            <h5 className="sidebar__item sidebar__title">Empowering SGSITS Coders</h5>
+            <h2 className="sidebar__name">Peer <span className="last-name">Finder</span></h2>
+            <h5 className="sidebar__item sidebar__title">Empowering SGSITS Students</h5>
 
             </div>
             <hr />

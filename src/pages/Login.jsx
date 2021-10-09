@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
+import './login-register.css';
 
 function Login() {
   const history = useHistory();
@@ -38,40 +39,47 @@ function Login() {
 
   return (
     <div className="sign_in_form">
-      <div className="sign_in_form_head">
-        <h1>Login to your Account</h1>
+      <div className="form-background">
+
+        <div className="sign_in_form-head">
+          <h1>Login to your Account</h1>
+        </div>
+        <form method="POST">
+          <div className="form-group">
+            <input
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter Your E-mail"
+              value={email}
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            {/* <label>Email</label> */}
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              placeholder="Enter Your Password"
+              value={password}
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            {/* <label>Password</label> */}
+          </div>
+          <div className="form-button">
+            <button type="submit" className="btn btn-md btn-info" onClick={loginUser}>
+              Log In
+            </button>
+          </div>
+          <p className="create_account">
+            Does not have account? <span><NavLink to="/signup">Create account</NavLink></span>
+          </p>
+        </form>
       </div>
-      <form method="POST">
-        <div className="form-group">
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter Your E-mail"
-            value={email}
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Enter Your Password"
-            value={password}
-            name="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary" onClick={loginUser}>
-          Log In
-        </button>
-        <p className="create_account">
-          Does not have account? <NavLink to="/signup">Create account</NavLink>
-        </p>
-      </form>
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.sign_in_form, .sign_up_form, .profile_form{
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+    height: 85%;
+}
+
+.form-background{
+    background-color: rgba(0, 0, 0, 0.198);
+    padding: 20px;
+    border-radius: 20px;
+    width: minmax(300px,50%);
+}
+
+.sign_in_form-head, .sign_up_form-head{
+    font-size: 1rem;
+    margin-bottom: 2em;
+}
+.form-button{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h1{
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--gian);
+
+}
