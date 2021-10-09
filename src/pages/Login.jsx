@@ -26,14 +26,12 @@ function Login() {
     }
     else{
       window.alert("Successful Login");
-      console.log("Profile set up nahi hui hai");
-      // console.log(response.tokens);
       localStorage.setItem('token', response.tokens);
       if(response.isProfileSetup === false){
-        history.push("/setprofile1");
+        history.push("/profile");
       }
       else{
-        history.push("/");
+        history.push("/home");
       }
     }
 }
@@ -76,6 +74,6 @@ function Login() {
       </form>
     </div>
   );
-};
+}
 
 export default Login

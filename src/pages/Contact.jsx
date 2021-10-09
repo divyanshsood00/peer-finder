@@ -1,42 +1,42 @@
 import React, { useState } from "react";
-import { NavLink, useHistory } from 'react-router-dom';
+// import { NavLink, useHistory } from 'react-router-dom';
 
 function Contact() {
-  const history = useHistory();
+//   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const loginUser = async(e)=>{
-    e.preventDefault();
+//   const loginUser = async(e)=>{
+//     e.preventDefault();
 
-    const res = await fetch('https://peer-finder-be.herokuapp.com/login',{
-      method: "POST",
-      withCredentials: true,
-      headers: {
-        "Content-Type" : "application/json"
-      },
-      body: JSON.stringify({
-        email, password
-      })
-    });
+//     const res = await fetch('https://peer-finder-be.herokuapp.com/login',{
+//       method: "POST",
+//       withCredentials: true,
+//       headers: {
+//         "Content-Type" : "application/json"
+//       },
+//       body: JSON.stringify({
+//         email, password
+//       })
+//     });
 
-    const response = await res.json();
-    if(res.status !== 201){
-      window.alert(response.error);
-    }
-    else{
-      window.alert("Successful Login");
-      console.log("Profile set up nahi hui hai");
-      // console.log(response.tokens);
-      localStorage.setItem('token', response.tokens);
-      if(response.isProfileSetup === false){
-        history.push("/setprofile1");
-      }
-      else{
-        history.push("/");
-      }
-    }
-}
+//     const response = await res.json();
+//     if(res.status !== 201){
+//       window.alert(response.error);
+//     }
+//     else{
+//       window.alert("Successful Login");
+//       console.log("Profile set up nahi hui hai");
+//       // console.log(response.tokens);
+//       localStorage.setItem('token', response.tokens);
+//       if(response.isProfileSetup === false){
+//         history.push("/setprofile1");
+//       }
+//       else{
+//         history.push("/");
+//       }
+//     }
+// }
   return (
     <div className="sign_in_form">
       <div className="sign_in_form_head">
@@ -77,7 +77,7 @@ function Contact() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary" onClick={loginUser}>
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
         
