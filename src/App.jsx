@@ -21,23 +21,36 @@ function App() {
     if (currentURL.endsWith('/home'))
             setActive(true);
   }, [currentURL,active])
-  const activeHandler = ()=>{
-    setActive('/home')
+  const homeHandler = ()=>{
+    
+setActive('/home')
   }
   return (
     <div className="App">
       <BrowserRouter>
         <div className="container-main">
           <div className="row">
-            {active && <div className="col-lg-3 col-md-4">
+            {/* {active && <div className="col-lg-3 col-md-4">
               <div className="app__sidebar">
-                <Sidebar/>              
+                <Switch>
+                  <Route path='home'>
+                    <Sidebar/>              
+                  </Route>
+                </Switch>
               </div>
-            </div>}
-
-            {active && <div className="col-lg-9 col-md-8">
+            </div>} */}
+            <Switch>
+                  <Route path='/home'>
+                    <div className="col-lg-3 col-md-4">
+                      <div className="app__sidebar">
+                        <Sidebar/>              
+                      </div>
+                    </div>
+                  </Route>
+            </Switch>
+            <div className="col">
               <div className="app__main-content">
-              <Navbar navHandler={activeHandler}/>
+              <Navbar navHandler={homeHandler}/>
               <Switch>
                 <Route path='/' exact>
                   <Landing/>
@@ -58,7 +71,42 @@ function App() {
                   <Profile/>
                 </Route>
                 <Route path='/login'>
-                  <Login navHandler={activeHandler}/>
+                  <Login navHandler={homeHandler}/>
+                </Route>
+                <Route path='/register'>
+                  <Register />
+                </Route>
+                <Route>
+                  <Redirect to='/'/>
+                </Route>
+              </Switch>
+              </div>
+            </div>
+
+            {/* {active && <div className="col-lg-9 col-md-8">
+              <div className="app__main-content">
+              <Navbar navHandler={homeHandler}/>
+              <Switch>
+                <Route path='/' exact>
+                  <Landing/>
+                </Route>
+                <Route path='/home'>
+                  <Home/>
+                </Route>
+                <Route path='/courses'>
+                  <Courses/>
+                </Route>
+                <Route path='/contact'>
+                  <Contact/>
+                </Route>
+                <Route path='/notes'>
+                  <Notes/>
+                </Route>
+                <Route path='/profile'>
+                  <Profile/>
+                </Route>
+                <Route path='/login'>
+                  <Login navHandler={homeHandler}/>
                 </Route>
                 <Route path='/register'>
                   <Register />
@@ -71,7 +119,7 @@ function App() {
             </div>}
             {!active && <div className="col">
               <div className="app__main-content">
-              <Navbar navHandler={activeHandler} />
+              <Navbar navHandler={homeHandler} />
               <Switch>
                 <Route path='/' exact>
                   <Landing/>
@@ -92,7 +140,7 @@ function App() {
                   <Profile/>
                 </Route>
                 <Route path='/login'>
-                  <Login/>
+                  <Login navHandler={homeHandler}/>
                 </Route>
                 <Route path='/register'>
                   <Register/>
@@ -102,7 +150,7 @@ function App() {
                 </Route>
               </Switch>
               </div>
-            </div>}
+            </div>} */}
           </div>
         </div>
       </BrowserRouter>

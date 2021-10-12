@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
 import './login-register.css';
 
-function Login() {
+function Login(props) {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,10 +29,12 @@ function Login() {
       window.alert("Successful Login");
       localStorage.setItem('token', response.tokens);
       if(response.isProfileSetup === false){
-        history.push("/profile");
+        props.navHandler()
+        history.replace("/profile");
       }
       else{
-        history.push("/home");
+        props.navHandler()
+        history.replace("/home");
       }
     }
 }
