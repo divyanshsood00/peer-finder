@@ -246,7 +246,7 @@ const Profile = () => {
                     avoidHighlightFirstOption
                   />
                 </div>
-                <div className="col" style={{ marginTop: "7px" }}>
+                <div className="col" style={{ marginTop: "7px"}}>
                   <Multiselect
                     options={CulturalInterest}
                     closeIcon="close"
@@ -257,6 +257,7 @@ const Profile = () => {
                     onSelect={selectCultural}
                     onRemove={removeCultural}
                     // displayValue="key"
+                    
                     showArrow
                     // selectedValues={selectedValues}
                     avoidHighlightFirstOption

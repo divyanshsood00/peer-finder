@@ -22,7 +22,6 @@ function App() {
             setActive(true);
   }, [currentURL,active])
   const activeHandler = ()=>{
-    // console.log('Its happening')
     setActive('/home')
   }
   return (
@@ -59,10 +58,10 @@ function App() {
                   <Profile/>
                 </Route>
                 <Route path='/login'>
-                  <Login/>
+                  <Login navHandler={activeHandler}/>
                 </Route>
                 <Route path='/register'>
-                  <Register/>
+                  <Register />
                 </Route>
                 <Route>
                   <Redirect to='/'/>
