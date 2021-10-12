@@ -140,7 +140,6 @@ const Profile = () => {
 
             <div className="sign_up_form_head sign_up_profile1_head">
               <h1>Set Up Your Profile </h1>
-              {id}
             </div>
             <form method="POST">
                 <div className="col" style={{ marginTop: "7px" }}>
