@@ -32,7 +32,7 @@ const Profile = () => {
   // Getting the Signed In User Data
   const callProfilePage = async ()=>{
     try {
-      const res = await fetch("https://peer-finder-be.herokuapp.com/profile", {
+      const res = await fetch("https://peerfinder.herokuapp.com/profile", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -114,7 +114,7 @@ const Profile = () => {
 
       const {_id, first_name, last_name, mobile_number, bio, technical_interest, non_technical_interest, cultural_interest, year_of_passing, linkedin_url, github_url} = user;
   
-      const res = await fetch('https://peer-finder-be.herokuapp.com/profile', {
+      const res = await fetch('https://peerfinder.herokuapp.com/profile', {
         method:"POST",
         headers:{
           "Content-Type" : "application/json"

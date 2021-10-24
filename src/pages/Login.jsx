@@ -10,7 +10,7 @@ function Login(props) {
   const loginUser = async(e)=>{
     e.preventDefault();
 
-    const res = await fetch('https://peer-finder-be.herokuapp.com/login',{
+    const res = await fetch('https://peerfinder.herokuapp.com/login',{
       method: "POST",
       withCredentials: true,
       headers: {

@@ -29,7 +29,7 @@ function Register() {
 
     const {email, password, confirmPassword} = user;
 
-    const res = await fetch('https://peer-finder-be.herokuapp.com/register', {
+    const res = await fetch('https://peerfinder.herokuapp.com/register', {
       method:"POST",
       headers:{
         "Content-Type" : "application/json"
