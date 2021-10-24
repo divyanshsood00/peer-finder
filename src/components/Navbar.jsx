@@ -10,13 +10,15 @@ function Navbar(props) {
         if (currentURL.endsWith('/'))
             setActive('PEER FINDER');
         else if (currentURL.endsWith('/home'))
-        setActive('home');
+        setActive('Home');
         // else if (currentURL.endsWith("/notes"))
         //     setActive('Notes');
         // else if (currentURL.endsWith('/courses'))
         //     setActive('Courses')
         else if (currentURL.endsWith('/profile'))
-            setActive('Profile') 
+            setActive('Profile')
+        else if (currentURL.endsWith('/contactus'))
+            setActive('Contact Us') 
     }, [active])
     return (
         <div className='navbar'>
@@ -27,7 +29,7 @@ function Navbar(props) {
                 {/* {active !== 'PEER FINDER'&& <Link to='/'className="navbar__item">
                 <div onClick={()=>setActive("PEER FINDER")}>PEER FINDER</div>
                 </Link>} */}
-                {active !== 'home'&& <Link to='/home'className="navbar__item">
+                {active !== 'Home'&& <Link to='/home'className="navbar__item">
                 <div onClick={()=>{setActive("Home");props.navHandler();}}>Home</div>
                 </Link>}
                 {active !== 'Login'&& <Link to='/login' className="navbar__item">
@@ -38,6 +40,9 @@ function Navbar(props) {
                 </Link>} } */}
                 {active !== 'Profile'&& <Link to='/profile'className="navbar__item">
                     <div onClick={()=>setActive("Profile")}>Profile</div>
+                </Link>}
+                {active !== 'Contact Us'&& <Link to='/contactus'className="navbar__item">
+                    <div onClick={()=>setActive("Contact Us")}>Contact Us</div>
                 </Link>}
             </div>
         </div>

@@ -13,8 +13,8 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     background: #00bf8f;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right bottom, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right bottom, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right bottom, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right bottom, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .container-main{
@@ -40,7 +40,7 @@ background: linear-gradient(to right bottom, #001510, #00bf8f); /* W3C, IE 10+/ 
 }
 .app__main-content{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 95vh;
     max-height: 95vh;
     margin: .5rem;

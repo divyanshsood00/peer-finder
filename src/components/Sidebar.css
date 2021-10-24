@@ -32,8 +32,9 @@
 
 .sidebar__title{
     border-radius: 500px;
-    background-color: #00bf8f2d;
+    background: linear-gradient(to bottom, #00151083, #00bf8f88);
     padding: 1rem;
+    /* color: aliceblue; */
 }
 .sidebar__nav{
     text-align: left;
@@ -51,7 +52,7 @@
     border-radius: .5rem;
     padding: .5rem;
     height: 3rem;
-    background-color:var(--gian);
+    background:linear-gradient(to right bottom, #001510, #00bf8f);
 }
 a{
     color: aliceblue;

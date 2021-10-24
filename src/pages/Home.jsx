@@ -14,13 +14,26 @@ const skills = [
 function Home() {
     return (
         <div className='home__container'>
-            <h5 className="home__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum quos, fugiat tempore libero soluta consectetur incidunt. Rem, provident minus?
+            <h5 className="home__info text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quia ipsa minima maiores unde modi sapiente natus eum, nisi provident recusandae adipisci cupiditate reiciendis fuga in autem hic consequatur totam?
             </h5>
             <div className="container home__feed-container">
-                <h4 className='home__feed-title'>Latest and Greatest from SGSITS.</h4>
-                
-                {skills.length===0 && <div className='home__feed-placeholder'>There are no recent posts.<br/><button className="btn btn-outline-dark">View Archieves</button></div>}
+                <h4 className='home__feed-title'>Finding your peer.</h4>
+                <form method="POST">
+                    <div className="form-group">
+                    <input
+                        type="text"
+                        className="form-control"
+                        // id="exampleInputEmail1"
+                        // aria-describedby="emailHelp"
+                        placeholder="Enter your Interest"
+                        // value={email}
+                        name="email"
+                        // onChange={(e) => setEmail(e.target.value)}
+                    />
+                    </div>
+                </form>
+                {skills.length===0 && <div className='home__feed-placeholder'>There are no recommended peers<br/><button className="btn btn-outline-dark">Generic Recommendations</button></div>}
                 {skills.length>0 &&<div className="row">
                 {
                     skills.map(({id,icon,title,about}) =>(
