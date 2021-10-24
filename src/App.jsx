@@ -76,6 +76,9 @@ setActive('/home')
                 <Route path='/register'>
                   <Register />
                 </Route>
+                <Route path = '/contactus'>
+                  <Contact/>
+                </Route>
                 <Route>
                   <Redirect to='/'/>
                 </Route>

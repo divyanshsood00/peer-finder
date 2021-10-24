@@ -42,6 +42,7 @@ function Contact() {
       <div className="sign_in_form_head">
         <h1>Contact Us</h1>
       </div>
+      <br/>
       <form method="POST">
         <div className="form-group">
           <input
@@ -70,16 +71,18 @@ function Contact() {
           <input
             type="text"
             className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Enter your message"
-            value={password}
-            name="password"
-            onChange={(e) => setPassword(e.target.value)}
+            // id="exampleInputMessage1"
+            placeholder="Enter your Message"
+            // value={password}
+            // name="password"
+            // onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <div className="form-button">
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </div>
         
       </form>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import {FaArchive, FaBook, FaBrain, FaDiscord, FaGithub, FaMailBulk, FaMoneyBill, FaTelegram} from 'react-icons/fa'
 import './Sidebar.css'
 
@@ -17,34 +18,35 @@ function Sidebar() {
             <hr />
             <div className="sidebar__nav">
                 <div className="nav">
-                <a href='#'><FaBook/>References</a>
+                <a href='#'><FaBook/> Technical Interests</a>
 
                 </div>
                 <div className="nav">
-                <a href='#'><FaMoneyBill/> Internships</a>
+                <a href='#'><FaMoneyBill/> Non Technical Interests</a>
 
                 </div>
                 <div className="nav">
-                <a href="#"><FaArchive/>Courses</a>
+                <a href="#"><FaArchive/> Sports Interests</a>
 
                 </div>
                 <div className="nav">
-                <a href="#"><FaBrain/> Pro Tips</a>
+                <a href="#"><FaBrain/> Alumini Section</a>
 
                 </div>
 
             </div>
+            <hr/>
             <div className="sidebar__buttons">
-                <button className="btn btn-info btn-lg login-button">Login</button>
-                <button className="btn btn-outline-dark btn-lg">Create Account</button>
+                <NavLink to='/login'><button className="btn btn-info btn-lg login-button">Login</button></NavLink>
+                <NavLink to='/register'><button className="btn btn-outline-dark btn-lg">Create Account</button></NavLink>
             </div>
-            <div className="sidebar__contact">
+            {/* <div className="sidebar__contact">
                 <h4>Hey, Join our communities.</h4>
                 <FaTelegram/> Telegram
                 <FaDiscord/> Discord
                 <FaMailBulk/> Gmail
                 <FaGithub/> Source
-            </div>
+            </div> */}
         </div>
     )
 }
