@@ -10,6 +10,10 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
+import User from './pages/User';
+import Technical from './pages/Technical';
+import NonTechnical from './pages/NonTechnical';
+import Cultural from './pages/Cultural';
 
 function App() {
   const [active,setActive] = useState(false)
@@ -75,6 +79,18 @@ setActive('/home')
                 </Route>
                 <Route path='/register'>
                   <Register />
+                </Route>
+                <Route path='/user'>
+                  <User />
+                </Route>
+                <Route path='/technical'>
+                  <Technical />
+                </Route>
+                <Route path='/non-technical'>
+                  <NonTechnical />
+                </Route>
+                <Route path='/cultural'>
+                  <Cultural />
                 </Route>
                 <Route path = '/contactus'>
                   <Contact/>
