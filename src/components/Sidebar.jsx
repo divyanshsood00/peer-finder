@@ -18,15 +18,15 @@ function Sidebar() {
             <hr />
             <div className="sidebar__nav">
                 <div className="nav">
-                <a href='#'><FaBook/> Technical Interests</a>
+                <NavLink to='/home/technical'><FaBook/> Technical Interests</NavLink>
 
                 </div>
                 <div className="nav">
-                <a href='#'><FaMoneyBill/> Non Technical Interests</a>
+                <NavLink to='/home/non-technical'><FaMoneyBill/> Non Technical Interests</NavLink>
 
                 </div>
                 <div className="nav">
-                <a href="#"><FaArchive/> Sports Interests</a>
+                <NavLink to='/home/cultural'><FaArchive/> Cultural Interests</NavLink>
 
                 </div>
                 <div className="nav">

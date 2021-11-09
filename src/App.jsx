@@ -59,6 +59,15 @@ setActive('/home')
                 <Route path='/' exact>
                   <Landing/>
                 </Route>
+                <Route path='/home/technical'>
+                  <Technical />
+                </Route>
+                <Route path='/home/non-technical'>
+                  <NonTechnical />
+                </Route>
+                <Route path='/home/cultural'>
+                  <Cultural />
+                </Route>
                 <Route path='/home'>
                   <Home/>
                 </Route>
@@ -83,15 +92,7 @@ setActive('/home')
                 <Route path='/user'>
                   <User />
                 </Route>
-                <Route path='/technical'>
-                  <Technical />
-                </Route>
-                <Route path='/non-technical'>
-                  <NonTechnical />
-                </Route>
-                <Route path='/cultural'>
-                  <Cultural />
-                </Route>
+                
                 <Route path = '/contactus'>
                   <Contact/>
                 </Route>

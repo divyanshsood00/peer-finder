@@ -15,7 +15,7 @@ function Navbar(props) {
         //     setActive('Notes');
         // else if (currentURL.endsWith('/courses'))
         //     setActive('Courses')
-        else if (currentURL.endsWith('/profile'))
+        else if (currentURL.endsWith('/user'))
             setActive('Profile')
         else if (currentURL.endsWith('/contactus'))
             setActive('Contact Us') 
@@ -38,7 +38,7 @@ function Navbar(props) {
                 {/* {active !== 'Courses'&& <Link to='/courses'className="navbar__item">
                     <div onClick={()=>setActive("Create Account")}>Create Account</div>
                 </Link>} } */}
-                {active !== 'Profile'&& <Link to='/profile'className="navbar__item">
+                {active !== 'Profile'&& <Link to='/user'className="navbar__item">
                     <div onClick={()=>setActive("Profile")}>Profile</div>
                 </Link>}
                 {active !== 'Contact Us'&& <Link to='/contactus'className="navbar__item">

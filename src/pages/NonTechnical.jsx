@@ -5,6 +5,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import UserCard from "../components/UserCard";
 import './profile.css'
 
 const NonTechnical = () => {
@@ -59,12 +60,15 @@ const NonTechnical = () => {
   if(checker && user.length >= lenCheck){
     
     const rendertheresponse = user.map((item) => (
-      <h1>{item.first_name}</h1>
+        <UserCard user={item} key={item.id}/>
+
     ));
 
     return (
       <div>
-        {rendertheresponse}
+        <div className="card-container" style={{display:'flex',flexWrap:'wrap'}}>
+          {rendertheresponse}
+        </div>
       </div>
     );  
   } 
