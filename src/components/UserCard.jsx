@@ -2,8 +2,7 @@ import React from 'react'
 import {FaGithub,FaLinkedin} from 'react-icons/fa'
 import './UserCard.css'
 
-function UserCard({user}) {
-    console.log(user,user.non_technical_interest)
+function UserCard({user , interest}) {
     return (
         <div>
             {/* <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500" rel="stylesheet"> */}
@@ -49,10 +48,10 @@ function UserCard({user}) {
                 </div>
                 <div className="skills">
                     <span className="value">{user.bio}</span>
-                    <span >
-
-                    {user.non_technical_interest.length==0 || user.non_technical_interest.map((value)=>(
-                        <span className='label label-info' key={value}>{value+" "}</span>
+                    <span style={{display: "flex", flexWrap: "wrap"}}>
+                    {/* {console.log(user)} */}
+                    { user[interest] && user[interest].map((value)=>(
+                        <p className='label label-info' key={value}>{value+" "}</p>
                     ))}
                     </span>
                 </div>
