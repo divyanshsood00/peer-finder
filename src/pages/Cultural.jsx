@@ -6,6 +6,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import './profile.css'
+import UserCard from "../components/UserCard";
 
 const Cultural = () => {
 
@@ -28,7 +29,7 @@ const Cultural = () => {
       });
       data = await res.json();
             
-      // console.log(data.length);
+      // console.log(data);
       setLenChek(data.length);
 
     // will be changed by auth true, thing.
@@ -59,8 +60,9 @@ const Cultural = () => {
   if(checker && user.length >= lenCheck){
     
     const rendertheresponse = user.map((item) => (
-      <h1>{item.first_name}</h1>
-    ));
+      <UserCard user={item} key={item.id} interest="cultural_interest" />
+
+  ));
 
     return (
       <div>
