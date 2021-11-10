@@ -52,15 +52,10 @@ const NonTechnical = () => {
     if(checker === false && lenCheck === 0)  callProfilePage();
   }); 
 
-  
-
-    
-
-
   if(checker && user.length >= lenCheck){
     
     const rendertheresponse = user.map((item) => (
-        <UserCard user={item} key={item.id}/>
+        <UserCard user={item} key={item.id} interest="non_technical_interest" />
 
     ));
 
@@ -79,7 +74,3 @@ const NonTechnical = () => {
   }
 }
 export default NonTechnical;
-            
-  
-          
-            

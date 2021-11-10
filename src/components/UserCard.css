@@ -111,5 +111,6 @@
     vertical-align: baseline;
     border-radius: .25em;
     background-color: var(--primary);
-    margin: 0 .25rem;
+    margin:0.25rem .25rem;
+    
   }

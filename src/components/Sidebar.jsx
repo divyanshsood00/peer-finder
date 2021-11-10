@@ -18,19 +18,19 @@ function Sidebar() {
             <hr />
             <div className="sidebar__nav">
                 <div className="nav">
-                <NavLink to='/home/technical'><FaBook/> Technical Interests</NavLink>
+                <NavLink to='/home/technical' style={{display : "flex"}}><FaBook/> <p style={{fontSize : "14px"}}>Technical Interests</p></NavLink>
 
                 </div>
                 <div className="nav">
-                <NavLink to='/home/non-technical'><FaMoneyBill/> Non Technical Interests</NavLink>
+                <NavLink to='/home/non-technical' style={{display : "flex"}}><FaMoneyBill/>  <p style={{fontSize : "14px"}}> Non Technical Interests </p></NavLink>
 
                 </div>
                 <div className="nav">
-                <NavLink to='/home/cultural'><FaArchive/> Cultural Interests</NavLink>
+                <NavLink to='/home/cultural' style={{display : "flex"}}><FaArchive/> <p style={{fontSize : "14px"}}>Cultural Interests</p></NavLink>
 
                 </div>
                 <div className="nav">
-                <a href="#"><FaBrain/> Alumini Section</a>
+                <a href="#" style={{display : "flex"}}><FaBrain/> <p style={{fontSize : "14px"}}>Alumini Section</p></a>
 
                 </div>
 

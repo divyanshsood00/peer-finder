@@ -6,6 +6,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import './profile.css'
+import UserCard from "../components/UserCard";
 
 const Technical = () => {
 
@@ -28,7 +29,7 @@ const Technical = () => {
       });
       data = await res.json();
             
-      // console.log(data.length);
+      console.log(data);
       setLenChek(data.length);
 
     // will be changed by auth true, thing.
@@ -39,27 +40,20 @@ const Technical = () => {
         setUser((user) => [...user, item]);
       });
       
-      
     } 
     catch (error) {
       history.push("/login");
     }
   }
 
-
   useEffect(() => {
     if(checker === false && lenCheck === 0)  callProfilePage();
   }); 
 
-  
-
-    
-
-
   if(checker && user.length >= lenCheck){
     
     const rendertheresponse = user.map((item) => (
-      <h1>{item.first_name}</h1>
+      <UserCard user={item} key={item.id} interest="technical_interest"/>
     ));
 
     return (
@@ -75,7 +69,3 @@ const Technical = () => {
   }
 }
 export default Technical;
-            
-  
-          
-            
