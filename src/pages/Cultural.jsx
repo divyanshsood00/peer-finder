@@ -1,8 +1,3 @@
-// Line Number 41 needs to be changed with res.auth === true thing
-// API changes should be made there.
-
-
-
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import './profile.css'
@@ -30,11 +25,11 @@ const Cultural = () => {
       data = await res.json();
             
       // console.log(data);
-      setLenChek(data.length);
+      setLenChek(data.data.length);
 
     // will be changed by auth true, thing.
-      if(data.first_name === "") history.push("/login");
-      await data.map(item =>{
+      if(data.auth === false) history.push("/login");
+      await data.data.map(item =>{
         setChecker(true);
         result.push(item);
         setUser((user) => [...user, item]);
@@ -47,16 +42,10 @@ const Cultural = () => {
     }
   }
 
-
   useEffect(() => {
     if(checker === false && lenCheck === 0)  callProfilePage();
   }); 
-
-  
-
-    
-
-
+ 
   if(checker && user.length >= lenCheck){
     
     const rendertheresponse = user.map((item) => (
